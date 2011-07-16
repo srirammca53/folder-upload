@@ -1,0 +1,20 @@
+
+<%= form_tag(:action => "download", :method => "get") do %>
+
+  <div class="field">
+  <%#= @upload.attach.original_filename %>
+  <%= hidden_field_tag :id, @upload.id %>
+  <p> Enter password to download file</p>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:password, "Password:") %>
+    <%= text_field_tag(:password) %>
+  </div>
+ 
+  <div class="actions">
+    <%= submit_tag("Submit") %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', uploads_path %>

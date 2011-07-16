@@ -1,0 +1,19 @@
+<%= link_to 'Back', uploads_path %>
+<center>
+<p id="notice"><%= notice %></p>
+
+<table border=0>
+<tr>
+<td>File name:</td>
+<td><%= @upload.folder_file_name %></td>
+</tr>
+<tr>
+<td>password:</td>
+<td><%= @upload.folder_password %></td>
+</tr>
+</table>
+<br>
+   <%= link_to "#{@upload.folder.url}", :action => 'verify', :id => @upload.id %><br>
+
+
+</center>
